@@ -1,9 +1,12 @@
 To test locally:
+
 fill in the .env var
 
 
 docker build -t sample-app .
+
 docker network create clo-network
+
 docker run --name mysql-db --network clo-network \
   -e MYSQL_ROOT_PASSWORD=password \
   -e MYSQL_DATABASE=employees \
